@@ -3,7 +3,7 @@ class NyaaExtension {
 
     async searchNyaa(params) {
         const searchQuery = params.titles.join(' ');
-        const url = `https://nyaa.si/?f=0&c=0_0&q=${encodeURIComponent(searchQuery)}&s=seeders&o=desc`;
+        const url = `https://nyaa.si/${encodeURIComponent(searchQuery)}&s=seeders&o=desc`;
 
         try {
             const response = await fetch(url);
